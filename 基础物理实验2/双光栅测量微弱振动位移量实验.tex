@@ -325,7 +325,78 @@
 \section{\exname\ \textbf{实验记录}}
 \subsection{实验内容、步骤、结果}
 \subsubsection{实验内容和步骤}
+\begin{enumerate}
+    \item 将固纬信号发生器的 CH1 通道连接至光学实验平台音叉驱动器（动光栅）， 输出频率约
+    为 500 Hz 、 Vpp 约为 6 V 的正弦波驱动信号 。
+    \item 将光学实验平台光电传感器输出信号连接至示波器的 CH1 通道。因为 光电传感器输出信
+    号功率较低，示波器 CH1 探头选择放大约 500 倍。
+    \item 将 固纬信号发生器同步信号输出（后面板 SYNC ）连接 至 示波器 CH2 作为触发源。
+    \item 检查上述步骤，注意不要接错。
+    \item 几何光路调整。 光学实验平台上的“激光器”接测试仪“半导体激光电源”，将激光器、
+    静光栅、动光栅摆在一条直线上。打开半导体激光电源，让激光穿越静、动光栅后形成一竖
+    排衍射光斑，使中间最亮光斑进入光电传感器里面，调节静光栅和动光栅的相对位置，使两
+    光栅尽可能平行。
+    \item 音叉谐振调节 。先调整好实验平台上音叉和激振换能器的间距，一般 0.3mm 为宜，可使
+    用塞尺辅助调节。 将固纬信号发生器的 CH1 通道连接至光学实验平台音叉驱动器（动光栅），
+    输出频率约为 500 Hz 、 Vpp 约为 6 V 的正弦波驱动信号 。 在 500Hz 附近 连续微调（间隔 0.1Hz
+    或更小） 输出频率， 直到使得音叉谐振（音叉振幅最大，光拍波数最多） ），调节时可用手轻
+    轻地按音叉顶部感受振动强弱，或听振动声音，找出调节方向。若音叉谐振太强烈，可调小
+    驱动信号幅度，使振动减弱，在示波器上看到的 T/2 内光拍的波数为 15 个左右（ 拍频波的
+    幅度和质量与激光光斑、静动光栅平行度、光电传感器位置都有关系需耐心调节 ）。记录此时音叉振动频率、屏上完整波的个数、不足一个完整波形的首数和尾数值以及对应该处完整
+    波形的振幅值。
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{双光栅谐振.jpg}
+    \end{figure}
+        \begin{table}[H]
+            \centering
+            \caption{音叉谐振测量}
+            \begin{tabular}{|c|c|}
+                \hline
+                频率(Hz)&501.364\\
+                \hline
+                T/2内的波数&8\\
+                \hline
+                音叉振动振幅(mm)&$4\times10^{-2}$\\
+                \hline
+            \end{tabular}
+        \end{table}
+    \item   测出外力驱动音叉时 的谐振曲线。 在音叉谐振点附近，调节驱动信号频率，测出音叉
+    的振动频率与对应的音叉振幅大小，频率间隔可以取 0.1H Z 选 8 个点 分别测出对应的波的
+    个数 计算出各自的振幅 A 。
+    \begin{table}[H]
+        \centering
+        \caption{外力驱动音叉}
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+            \hline
+            频率(Hz)&500.964&501.064&501.164&501.264&501.464&501.564&501.664&501.764\\
+            \hline
+            T/2内的波数&4&5.5&7.5&7.5&7.5&6.75&6.25&5\\
+            \hline
+            音叉振动振幅(mm)&$2\times10^{-2}$&$2.75\times10^{-2}$&$3.75\times10^{-2}$&$3.75\times10^{-2}$&$3.75\times10^{-2}$&$3.375\times10^{-2}$&$3.125\times10^{-2}$&$2.5\times10^{-2}$\\
+            \hline
+        \end{tabular}}
+    \end{table}
+    \item 保持驱动信号输出幅度不变，将软管放入音叉上的小孔从而改变音叉的有效质量，调节
+    驱动信号频率，研究谐振曲线的变化趋势。
+    \begin{table}[H]
+        \centering
+        \caption{改变音叉质量}
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+            \hline
+            频率(Hz)&501.864&500.764&561.664&501.564&501.464&501.364&501.264&501.164\\
+            \hline
+            T/2内的波数&2&2.25&2.25&2.5&3&2.75&2.5&2.5\\
+            \hline
+            音叉振动振幅(mm)&$10^{-2}$&$1.125\times10^{-2}$&$1.125\times10^{-2}$&$1.25\times10^{-2}$&$1.5\times10^{-2}$&$1.375\times10^{-2}$&$1.25\times10^{-2}$&$1.25\times10^{-2}$\\
+            \hline
+        \end{tabular}}
+    \end{table}
 
+\end{enumerate}
+ 
 \subsection{实验过程遇到问题记录}
 
 
@@ -348,7 +419,51 @@
 
 \section{\exname\ \textbf{分析与讨论}}
 \subsection{分析与讨论}
+\begin{question}
+    求出音叉谐振时光拍信号的平均频率。
+    \tcblower
+    \begin{align*}
+        F_{\text{拍}}=\frac{2k}{T}=8000\text{Hz}
+    \end{align*}
+\end{question}
 
+\begin{question}
+    求出音叉在谐振点时作微弱振动的位移振幅。
+    \tcblower
+    \begin{align*}
+        A=\frac{\int_{0}^{\frac{T}{2}}F_{\text{拍}}\d t}{2n_{\theta}}=4\times10{-2}\text{mm}
+    \end{align*}
+\end{question}
+
+\begin{question}
+    画出音叉的频率 振幅曲线；分析讨论其特点。
+    \tcblower
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{双光栅8.png}
+    \end{figure}
+    \begin{enumerate}
+        \item 曲线在501.364Hz处达到峰值，表明此处为音叉的谐振频率。
+        \item 曲线在共振峰附近变化不大，表明系统阻尼较大。
+        \item 该曲线并不对称，表明解可能较为复杂。
+    \end{enumerate}
+    
+\end{question}
+
+\begin{question}
+    作出音叉不同有效质量时的谐振 曲线，分析讨论其变化趋势。
+    \tcblower
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{双光栅9.png}
+    \end{figure}
+    \begin{enumerate}
+        \item 相较于不加软管，曲线整体下移，表明有效质量增大，在相同外力下音叉振幅减小。
+        \item 相较于不加软管，谐振频率右移表明有效质量增大，谐振频率同样增大。
+        \item 但曲线仍维持先上升后下降的趋势，表明添加有效质量并不会改变该振动的物理实质。
+    \end{enumerate}
+    
+\end{question}
 \clearpage
 % ---------------------------------------------------------------------
 %   参考文献
@@ -364,19 +479,19 @@
 %\end{thebibliography}
 
 
-%\clearpage
+\clearpage
 \appendix
 \appendixpage
 \addappheadtotoc
 %\subsection*{相图代码}
 %\includepdf[pages=-]{chaos.pdf}
-%\subsection*{原件}
+\subsection*{原件}
 %\includepdf[pages=-]{实验3原件.pdf}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=\textwidth]{焦距数据.jpg}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{双光栅原件.jpg}
 	
-%\end{figure}
+\end{figure}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=\textwidth]{透镜焦距.jpg}
@@ -390,8 +505,8 @@
 %	\includegraphics[width=0.4\textwidth]{单缝原件3.jpg}
 %	\includegraphics[width=0.4\textwidth]{单缝原件4.jpg}
 %\end{figure}
-%\subsection*{桌面}
-%\begin{figure}[H]
-%	\includegraphics[width=0.95\textwidth]{迈克尔逊桌面.jpg}
-%\end{figure}
+\subsection*{桌面}
+\begin{figure}[H]
+	\includegraphics[width=0.95\textwidth]{双光栅桌面.jpg}
+\end{figure}
 \end{document}

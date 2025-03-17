@@ -6,8 +6,8 @@
 \contentsline {section}{\numberline {2}双光栅测量微弱振动位移量实验\ \textbf {实验记录}}{11}{section.2}%
 \contentsline {subsection}{\numberline {2.1}实验内容、步骤、结果}{11}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}实验内容和步骤}{11}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}实验过程遇到问题记录}{11}{subsection.2.2}%
-\contentsline {section}{\numberline {3}双光栅测量微弱振动位移量实验\ \textbf {分析与讨论}}{12}{section.3}%
-\contentsline {subsection}{\numberline {3.1}分析与讨论}{12}{subsection.3.1}%
-\contentsline {section}{Appendices}{13}{section*.13}%
+\contentsline {subsection}{\numberline {2.2}实验过程遇到问题记录}{13}{subsection.2.2}%
+\contentsline {section}{\numberline {3}双光栅测量微弱振动位移量实验\ \textbf {分析与讨论}}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}分析与讨论}{14}{subsection.3.1}%
+\contentsline {section}{Appendices}{18}{section*.19}%
 \contentsfinish 
